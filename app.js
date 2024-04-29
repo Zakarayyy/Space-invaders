@@ -6,10 +6,11 @@ function initPlateau() {
     var divContenu = document.getElementById('contenu');
     var tableau = document.createElement('table');
     for (var i = 0; i < hauteur; i++) {
-        var ligne = document.createElement('tr');        for (var j = 0; j < largeur; j++) {
+        var ligne = document.createElement('tr');        
+        for (var j = 0; j < largeur; j++) {
             var cellule = document.createElement('td');
             var img = document.createElement('img');
-            img.src = 'vide.png'; 
+            img.src = 'Tesla.jpg'; 
             cellule.appendChild(img);
             ligne.appendChild(cellule);
         }
@@ -18,3 +19,9 @@ function initPlateau() {
     divContenu.appendChild(tableau);
 }
 window.addEventListener('load', initPlateau);
+
+function lancerPartie() {
+    placerVaisseau();
+}
+
+document.getElementById('boutonJouer').addEventListener('click', lancerPartie);
