@@ -24,4 +24,4 @@ function lancerPartie() {
     placerVaisseau();
 }
 
-document.getElementById('boutonJouer').addEventListener('click', lancerPartie);
+document.getElementById('boutonJouer').addEventListener(onclick('lancerPartie'));
